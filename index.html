@@ -38,16 +38,15 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
-
 <style>
   body {
     margin: 0;
     padding: 0;
     background-image: url('images/bhor2.jpg'); /* ✅ Local image */
-    background-size: 160%;                     /* 🔍 Zoomed-out slightly */
-    background-position: center center;        /* Perfectly centered */
+    background-size: 160%;                     /* 🔍 Zoomed-out look */
+    background-position: center center;        /* Centered */
     background-repeat: no-repeat;              /* No tiling */
-    background-attachment: fixed;              /* Fixed on desktop */
+    background-attachment: fixed;              /* Desktop fixed effect */
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -67,10 +66,12 @@
     pointer-events: none;
   }
 
+  /* ✅ Mobile-friendly adjustments */
   @media (max-width: 768px) {
     body {
-      background-attachment: scroll;
-      background-size: 100%; /* Adjust size on mobile */
+      background-attachment: scroll;    /* Prevents flickering on iOS */
+      background-size: cover;           /* Fill screen on mobile */
+      background-position: center top;  /* Better alignment for tall screens */
     }
   }
 </style>
