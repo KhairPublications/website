@@ -74,7 +74,25 @@
       background-position: center top;  /* Better alignment for tall screens */
     }
   }
+
+ .navbar-custom {
+      background-color: #115802;
+    }
+    .navbar-custom .nav-link {
+      color: #ffc107 !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #fff !important;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffc107 !important;
+    }
+
 </style>
+
 
 
 
@@ -220,6 +238,34 @@
   </svg>
 
 
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="#">Khair Publications</a>
+    <button class="navbar-toggler text-yellow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars text-yellow"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="our-team.html"><i class="fas fa-users me-1"></i> Our Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="manuscript.html"><i class="fas fa-book me-1"></i> Documents</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <!-- Header/Hero Section -->
   <header class="position-relative">
     <div class="bg-dark-custom p-2 p-lg-5 m-3 m-lg-4 rounded-4">
@@ -281,7 +327,7 @@
   <div class="container">
     <div class="row g-lg-5">
       <div class="banner-image col-md-6" data-aos="clip-bottom" data-aos-duration="1000">
-        <img src="images/logo1.pnj.png" class="img-fluid" alt="David Paciolla" />
+        <img src="images/logo1.png" class="img-fluid" alt="David Paciolla" />
       </div>
 
       <!-- ✅ Set text color to white here -->
@@ -296,7 +342,7 @@
 
         <ul>
           <li><strong>We are a creative publishing house dedicated to publishing quality literature, research, and contemporary writing.</strong></li>
-          <li><strong>Continuing credible work in Sufism, Islamic education, and history.</strong></li>
+          <li><strong>Continuing a legacy of contributions to the study of Sufism.</strong></li>
           <li><strong>Spreading authentic Islamic knowledge to global readers.</strong></li>
           <li><strong>Encouraging inter-faith understanding, deepening spiritual growth, and working towards global peace.</strong></li>
         </ul>
