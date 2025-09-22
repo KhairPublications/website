@@ -198,9 +198,11 @@
           An insightful manuscript exploring the foundations of Sufi spirituality, interfaith harmony, and ethical teachings.
         </p>
         
-        <!-- PDF Preview -->
-        <div class="ratio ratio-16x9 mb-3">
-          <iframe id="pdfFrame" src="Manuscript.pdf#toolbar=0&navpanes=0&scrollbar=0" class="pdf-preview"></iframe>
+        <!-- PDF Preview (Responsive) -->
+        <div class="pdf-container mb-3">
+          <iframe id="pdfFrame" 
+                  src="Manuscript.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+                  class="pdf-preview"></iframe>
         </div>
 
         <!-- Fullscreen Button -->
@@ -212,21 +214,47 @@
   </div>
 </section>
 
+<!-- Custom CSS -->
+<style>
+  .pdf-container {
+    width: 100%;
+    height: 500px; /* default for desktop */
+  }
+  .pdf-preview {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+  }
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .pdf-container {
+      height: 350px; /* shorter but still readable */
+    }
+  }
+  @media (max-width: 480px) {
+    .pdf-container {
+      height: 280px; /* fits small phones */
+    }
+  }
+</style>
+
 <!-- Fullscreen Script -->
 <script>
   function openFullscreen() {
     var elem = document.getElementById("pdfFrame");
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { 
+    } else if (elem.mozRequestFullScreen) {
       elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { 
+    } else if (elem.webkitRequestFullscreen) {
       elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { 
+    } else if (elem.msRequestFullscreen) {
       elem.msRequestFullscreen();
     }
   }
 </script>
+
 
 <!-- Footer -->
 <footer class="py-5 bg-dark-custom rounded-4 m-3 m-lg-4" data-aos="fade-up">
@@ -282,3 +310,4 @@
 
 </body>
 </html>
+
