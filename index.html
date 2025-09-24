@@ -6,29 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Khair Publications</title>
 
-
-
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700;800&display=swap"
     rel="stylesheet" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <!-- Swiper JS CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- custom style CSS -->
-  <link rel="stylesheet" href="style.css">
-
-   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khair Publications</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- AOS CSS -->
@@ -38,64 +20,60 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-image: url('images/bhorvi.JPG'); /* ✅ Local image */
-    background-size: 100%;                     /* 🔍 Zoomed-out look */
-    background-position: center center;        /* Centered */
-    background-repeat: no-repeat;              /* No tiling */
-    background-attachment: fixed;              /* Desktop fixed effect */
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    z-index: 0;
-  }
-
-  /* ✅ Green overlay for contrast */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(23, 109, 27, 0.88);
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  /* ✅ Mobile-friendly adjustments */
-  @media (max-width: 768px) {
+  <style>
     body {
-      background-attachment: scroll;    /* Prevents flickering on iOS */
-      background-size: cover;           /* Fill screen on mobile */
-      background-position: center top;  /* Better alignment for tall screens */
+      margin: 0;
+      padding: 0;
+      background-image: url('images/bhorvi.JPG');
+      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      z-index: 0;
     }
-  }
 
- .navbar-custom {
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(23, 109, 27, 0.88);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+      }
+    }
+
+    .navbar-custom {
       background-color: #115802;
     }
+
     .navbar-custom .nav-link {
       color: #ffc107 !important;
       font-weight: 600;
       transition: color 0.3s ease;
     }
+
     .navbar-custom .nav-link:hover {
       color: #fff !important;
     }
+
     .navbar-brand {
       font-weight: bold;
       color: #ffc107 !important;
     }
-
-</style>
-
-
-
-
+  </style>
 </head>
 
 
@@ -238,33 +216,33 @@
   </svg>
 
 
- <!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
   <div class="container">
     <a class="navbar-brand" href="#">Khair Publications</a>
-    <button class="navbar-toggler text-yellow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon">
-        <i class="fas fa-bars text-yellow"></i>
-      </span>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler text-yellow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Default (closed state) -->
+      <i class="fas fa-ellipsis-v text-yellow" id="menu-icon"></i>
     </button>
+
+    <!-- Menu -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="our-team.html"><i class="fas fa-users me-1"></i> Our Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="manuscript.html"><i class="fas fa-book me-1"></i> Documents</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact Us</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="our-team.html"><i class="fas fa-users me-1"></i> Our Team</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Board.html"><i class="fas fa-chalkboard-teacher me-1"></i> Editorial Board</a></li>
+        <li class="nav-item"><a class="nav-link" href="manuscript.html"><i class="fas fa-book me-1"></i> Manuscripts</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact Us</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+
+
 
   <!-- Header/Hero Section -->
   <header class="position-relative">
@@ -327,7 +305,7 @@
   <div class="container">
     <div class="row g-lg-5">
       <div class="banner-image col-md-6" data-aos="clip-bottom" data-aos-duration="1000">
-        <img src="images/logo1.pnj.png" class="img-fluid" alt="David Paciolla" />
+        <img src="images/logo1.png" class="img-fluid" alt="David Paciolla" />
       </div>
 
       <!-- ✅ Set text color to white here -->
@@ -498,11 +476,28 @@
   </div>
 </section>
 
-  
+  <!-- Manuscripts Section -->
+<section class="py-5 position-relative overflow-hidden mb-5" data-aos="clip-bottom" id="manuscripts" style="background-color: var(--light-bg);">
+  <!-- Transparent overlay box -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(5, 141, 17, 0.4); z-index: 0;"></div>
+
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10">
+        <h2 class="content-title text-yellow mb-3">Our Manuscripts</h2>
+        <p class="text-muted-custom mb-4">
+          Khair Publications preserves and publishes rare manuscripts that reflect the rich intellectual and spiritual traditions of the Muslim world. These works cover classical literature, Sufi thought, and scholarly contributions that inspire academic research and cultural understanding.
+        </p>
+        <a href="manuscript.html" class="btn btn-outline-warning px-4 py-2 rounded-pill mt-2 fw-semibold" target="_blank">
+          Explore Manuscripts
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-  <!-- About Us -->
-
+<!-- About Us Section -->
 <section class="py-5 position-relative overflow-hidden" data-aos="clip-bottom" id="about" style="background-color: var(--light-bg);">
   <!-- Transparent overlay box -->
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(5, 141, 17, 0.4); z-index: 0;"></div>
@@ -514,13 +509,14 @@
         <p class="text-muted-custom mb-4">
           Khair Publications is dedicated to promoting literature, academic research, and Sufi thought. Our mission is to preserve classical heritage while fostering modern discourse in Islamic studies and social sciences.
         </p>
-       <a href="our-team.html" class="btn btn-outline-warning px-4 py-2 rounded-pill mt-2 fw-semibold"  target="_blank">
+        <a href="our-team.html" class="btn btn-outline-warning px-4 py-2 rounded-pill mt-2 fw-semibold" target="_blank">
           More About Us
         </a>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -626,10 +622,7 @@
   </div>
 </footer>
 
-
-
-
-  <!-- Bootstrap JS Bundle with Popper -->
+<!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- JQuery js -->
   <script src="js/jquery-1.11.0.min.js"></script>
@@ -666,7 +659,57 @@
       document.getElementById('fullscreenMenu')?.classList.remove('active');
     });
   </script>
+
+<script>
+  const navbarNav = document.getElementById("navbarNav");
+  const menuIcon = document.getElementById("menu-icon");
+
+  navbarNav.addEventListener("show.bs.collapse", () => {
+    menuIcon.classList.remove("fa-ellipsis-v");
+    menuIcon.classList.add("fa-times"); // Close icon
+  });
+
+  navbarNav.addEventListener("hide.bs.collapse", () => {
+    menuIcon.classList.remove("fa-times");
+    menuIcon.classList.add("fa-ellipsis-v"); // Open icon
+  });
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbarNav = document.getElementById("navbarNav");
+    const menuIcon = document.getElementById("menu-icon");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+
+    if (navbarNav && menuIcon && navbarToggler) {
+      // 🔄 Swap icon when open/close
+      navbarNav.addEventListener("show.bs.collapse", () => {
+        menuIcon.classList.replace("fa-ellipsis-v", "fa-times");
+      });
+
+      navbarNav.addEventListener("hide.bs.collapse", () => {
+        menuIcon.classList.replace("fa-times", "fa-ellipsis-v");
+      });
+
+      // 🔒 Auto-close when clicking a nav link
+      document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.getComputedStyle(navbarToggler).display !== "none") {
+            new bootstrap.Collapse(navbarNav).hide();
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
-
 
